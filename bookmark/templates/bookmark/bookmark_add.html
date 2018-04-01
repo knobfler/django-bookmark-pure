@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}
+Bookmark Add
+{% endblock %}
+{% block content %}
+    <form action="" method="post" style="margin-top: 1rem">
+        {% csrf_token %}
+        {{ form.as_p }}
+       <input class="btn btn-primary" type="submit" value="북마크 추가">
+    </form>
+
+{% endblock %}

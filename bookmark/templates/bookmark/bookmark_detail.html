@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}
+Bookmark Detail
+{% endblock %}
+{% block content %}
+<div class="card" style="margin-top: 1rem">
+    <div class="card-body">
+        사이트 이름: {{ object.site_title }}
+
+    </div>
+    <div class="card-body">
+        사이트 주소: {{ object.site_url }}
+
+
+    </div>
+</div>
+
+{% endblock %}

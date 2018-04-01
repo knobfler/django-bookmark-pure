@@ -1,0 +1,12 @@
+body {
+    background: #f8f9fa;
+}
+
+nav {
+    background: #fcc2d7;
+
+}
+
+.navbar-light .navbar-brand {
+    color: white;
+}

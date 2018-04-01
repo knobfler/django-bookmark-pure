@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block title %}
+Bookmark App
+{% endblock %}
+{% block content %}
+{% for object in object_list %}
+<table class="table" style="margin-top: 1rem">
+    <thead>
+    <tr>
+        <th scope="col">site number</th>
+        <th scope="col">site name</th>
+        <th scope="col">site url</th>
+        <th scope="col">
+            삭제
+        </th>
+        <th scope="col">
+            수정
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th scope="row">{{ object.id }}</th>
+        <td><a href="{% url 'bookmark:detail' object.id %}">{{ object.site_title }}</a></td>
+        <td>{{ object.site_url }}</td>
+        <td>
+            <a href="{% url 'bookmark:delete' object.id %}" class="btn btn-danger">삭제</a>
+        </td>
+        <td>
+            <a href="{% url 'bookmark:update' object.id %}" class="btn btn-info">수정</a>
+        </td>
+    </tr>
+
+    </tbody>
+</table>
+
+{% endfor %}
+{% endblock %}
